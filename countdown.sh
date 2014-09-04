@@ -9,6 +9,7 @@ end=$(( $now + $1 ))
 message=${@:2}
 tasks=()
 
+echo "Press t to add a task!"
 while true; do
 	now=$(date +%s)
 	if [[ $end < $now ]]; then
@@ -21,7 +22,6 @@ while true; do
 		paplay $alarm_path
 		exit 0
 	fi
-	echo "Press t to add a task!"
  	printf "\rTime remaining: %5d seconds " $(( $end - $now )) 
 	read -n 1 -t 1 k
 	if [[ $k == t ]]; then
