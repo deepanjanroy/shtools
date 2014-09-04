@@ -28,6 +28,6 @@ while true; do
 		echo
 		printf "Enter post-countdown task: "
 		read task
-		[[ -n task ]] && tasks+=($task)
+		[[ -n task ]] && tasks+=("$task")
 	fi
 done
